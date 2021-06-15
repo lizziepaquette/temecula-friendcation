@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/temecula-friendcation/static/css/main.6602fc4b.chunk.css",
-    "main.js": "/temecula-friendcation/static/js/main.76b39cde.chunk.js",
-    "main.js.map": "/temecula-friendcation/static/js/main.76b39cde.chunk.js.map",
+    "main.js": "/temecula-friendcation/static/js/main.2adeb881.chunk.js",
+    "main.js.map": "/temecula-friendcation/static/js/main.2adeb881.chunk.js.map",
     "runtime-main.js": "/temecula-friendcation/static/js/runtime-main.fe4dabe8.js",
     "runtime-main.js.map": "/temecula-friendcation/static/js/runtime-main.fe4dabe8.js.map",
     "static/js/2.280beba6.chunk.js": "/temecula-friendcation/static/js/2.280beba6.chunk.js",
@@ -11,12 +11,13 @@
     "static/js/3.25e456eb.chunk.js.map": "/temecula-friendcation/static/js/3.25e456eb.chunk.js.map",
     "index.html": "/temecula-friendcation/index.html",
     "static/css/main.6602fc4b.chunk.css.map": "/temecula-friendcation/static/css/main.6602fc4b.chunk.css.map",
-    "static/js/2.280beba6.chunk.js.LICENSE.txt": "/temecula-friendcation/static/js/2.280beba6.chunk.js.LICENSE.txt"
+    "static/js/2.280beba6.chunk.js.LICENSE.txt": "/temecula-friendcation/static/js/2.280beba6.chunk.js.LICENSE.txt",
+    "static/media/temecula-main-view.571b6f1e.png": "/temecula-friendcation/static/media/temecula-main-view.571b6f1e.png"
   },
   "entrypoints": [
     "static/js/runtime-main.fe4dabe8.js",
     "static/js/2.280beba6.chunk.js",
     "static/css/main.6602fc4b.chunk.css",
-    "static/js/main.76b39cde.chunk.js"
+    "static/js/main.2adeb881.chunk.js"
   ]
 }
