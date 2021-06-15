@@ -1,6 +1,7 @@
 import './App.css';
 import styled from 'styled-components';
 import Countdown from 'react-countdown';
+import temeculaMainPhoto from './temecula-main-view.png'
 
 function App() {
   const temeculaTripStart = new Date('2021-08-13T16:00:00');
@@ -10,9 +11,6 @@ function App() {
       <Countdown 
           date={ temeculaTripStart }
           renderer={ CountdownClock } />
-      <header className="App-header">
-        TIME IS TICKING
-      </header>
     </div>
   );
 }
@@ -23,8 +21,10 @@ const CountdownHeader = styled.h1`
 `;
 
 const CountdownClockWrapper = styled.div`
-  padding-top: 48px;
+  height: 1630px;
+  padding-top: 100px;
   color: white;
+  background-image: url("${temeculaMainPhoto}");
 `;
 
 const CountdownClock = ({ days, hours, minutes, seconds, completed }) => {
