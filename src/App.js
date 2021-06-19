@@ -4,41 +4,32 @@ import Countdown from 'react-countdown';
 import temeculaMainPhoto from './photos/temecula-main-view.svg';
 import funnyBwBackground from './photos/temecula-main-view-bw.svg';
 
-function App() {
-  const temeculaTripStart = new Date('2021-08-13T16:00:00');
-
-  return (
-    <div className="App">
-      <Countdown
-          date={ temeculaTripStart }
-          renderer={ CountdownClock } />
-    </div>
-  );
-}
-
 const CountdownHeader = styled.h1`
-  font-size: 144px;
-  margin-top: 0px;
+  font-size: 12vw;
+  margin: 0px;
 `;
 
 const CountdownClockWrapper = styled.div`
-  height: 1630px;
-  padding-top: 100px;
+  height: 100vh;
+  width: 100vw;
   color: white;
-  background-image: url("${temeculaMainPhoto}");
-`;
-
-const CompletedWrapper = styled.div`
-  background-image: url("${funnyBwBackground}");
+  background-image: url("${ props => props.bgImg }");
+  background-size: contain;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
 `;
 
 const CountdownClock = ({ days, hours, minutes, seconds, completed }) => {
   if (completed) {
-    return <CompletedWrapper><h2>I really hope it was fun.</h2></CompletedWrapper>;
+    return (
+      <CountdownClockWrapper bgImg={ funnyBwBackground } >
+        <CountdownHeader>I really hope it was fun.</CountdownHeader>
+      </CountdownClockWrapper>
+    );
   }
 
   return (
-    <CountdownClockWrapper>
+    <CountdownClockWrapper bgImg={ temeculaMainPhoto } >
       <CountdownHeader>
         {days} Days <br/>
         {hours} Hours <br/>
@@ -48,5 +39,21 @@ const CountdownClock = ({ days, hours, minutes, seconds, completed }) => {
     </CountdownClockWrapper>
   );
 }
+
+function App() {
+  const temeculaTripStart = new Date('2021-08-13T16:00:00');
+
+  return (
+    <PageWrapper className="App">
+      <Countdown
+          date={ temeculaTripStart }
+          renderer={ CountdownClock } />
+    </PageWrapper>
+  );
+}
+
+const PageWrapper = styled.div`
+  @media screen and (max-width: 768px) {}
+`;
 
 export default App;
