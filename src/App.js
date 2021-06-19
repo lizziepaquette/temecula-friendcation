@@ -67,7 +67,7 @@ function App() {
   return (
     <Router>
       <MyCountdown temeculaTripStart={temeculaTripStart} path="/" />
-      <Playlist path="playlist" />
+      <Playlist  path={process.env.PUBLIC_URL + '/playlist'} />
     </Router>
 
   );
