@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import Countdown from 'react-countdown';
 import temeculaMainPhoto from './photos/temecula-main-view.svg';
 import funnyBwBackground from './photos/temecula-main-view-bw.svg';
+import Playlist from './Playlist'
+import { Router } from "@reach/router"
 
 const CountdownHeader = styled.h1`
   font-size: 12vw;
@@ -40,20 +42,31 @@ const CountdownClock = ({ days, hours, minutes, seconds, completed }) => {
   );
 }
 
-function App() {
-  const temeculaTripStart = new Date('2021-08-13T16:00:00');
+const PageWrapper = styled.div`
+  @media screen and (max-width: 768px) {}
+`;
 
-  return (
-    <PageWrapper className="App">
+
+const MyCountdown = ({ temeculaTripStart} ) => (
+
+   <PageWrapper className="App">
       <Countdown
           date={ temeculaTripStart }
           renderer={ CountdownClock } />
     </PageWrapper>
+)
+
+function App() {
+  const temeculaTripStart = new Date('2021-08-13T16:00:00');
+
+  return (
+    <Router>
+      <MyCountdown temeculaTripStart={temeculaTripStart} path="/" />
+      <Playlist path="playlist" />
+    </Router>
+
   );
 }
 
-const PageWrapper = styled.div`
-  @media screen and (max-width: 768px) {}
-`;
 
 export default App;
