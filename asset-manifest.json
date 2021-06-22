@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/temecula-friendcation/static/css/main.6602fc4b.chunk.css",
-    "main.js": "/temecula-friendcation/static/js/main.5ff5567f.chunk.js",
-    "main.js.map": "/temecula-friendcation/static/js/main.5ff5567f.chunk.js.map",
+    "main.js": "/temecula-friendcation/static/js/main.9a31cdfc.chunk.js",
+    "main.js.map": "/temecula-friendcation/static/js/main.9a31cdfc.chunk.js.map",
     "runtime-main.js": "/temecula-friendcation/static/js/runtime-main.ee461aed.js",
     "runtime-main.js.map": "/temecula-friendcation/static/js/runtime-main.ee461aed.js.map",
     "static/js/2.ca612af9.chunk.js": "/temecula-friendcation/static/js/2.ca612af9.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.ee461aed.js",
     "static/js/2.ca612af9.chunk.js",
     "static/css/main.6602fc4b.chunk.css",
-    "static/js/main.5ff5567f.chunk.js"
+    "static/js/main.9a31cdfc.chunk.js"
   ]
 }
