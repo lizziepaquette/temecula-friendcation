@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Countdown from 'react-countdown';
-import temeculaMainPhoto from './photos/temecula-main-view.svg';
-import funnyBwBackground from './photos/temecula-main-view-bw.svg';
+import temeculaMainPhoto from '../photos/temecula-main-view.svg';
+import funnyBwBackground from '../photos/temecula-main-view-bw.svg';
 
 
 const CountdownHeader = styled.h1`
