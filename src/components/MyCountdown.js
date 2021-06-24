@@ -19,6 +19,10 @@ const CountdownClockWrapper = styled.div`
   box-sizing: border-box;
   background-position: 30% 50%;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 20vh;
 `;
 
 
