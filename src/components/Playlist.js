@@ -1,5 +1,6 @@
 import React from "react"
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const PageWrapper = styled.div`
   @media screen and (max-width: 768px) {}
@@ -12,6 +13,9 @@ const SpotifyIframe = styled.iframe`
 
 const Playlist = () => (
   <PageWrapper className="App">>
+    <h1>
+      <Link to="/info">Collaborative Playlist</Link>
+    </h1>
     <SpotifyIframe
       title="Collaborative Playlist"
       src="https://open.spotify.com/embed/playlist/1mPkhlYZZEatTrN5t1AmPD"
