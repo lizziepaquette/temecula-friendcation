@@ -11,8 +11,10 @@ import Menu from './components/Menu'
 
 function App() {
   return (
-   <HashRouter>
-     <Menu />
+    <div id="outer-container">
+    <HashRouter>
+      <Menu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } />
+      <main id="page-wrap">
       <Switch>
         <Route
           exact
@@ -50,7 +52,10 @@ function App() {
           component={Menu}
         />
       </Switch>
+        </main>
     </HashRouter>
+    </div>
+
   );
 }
 

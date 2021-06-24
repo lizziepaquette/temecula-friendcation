@@ -1,9 +1,57 @@
-import { slide as BurgerMenu } from 'react-burger-menu'
+import { reveal as Reveal } from 'react-burger-menu'
 import { Link } from 'react-router-dom';
 
-const Menu = () => {
+
+var styles = {
+  bmBurgerButton: {
+    position: 'fixed',
+    width: '36px',
+    height: '30px',
+    left: '36px',
+    top: '36px'
+  },
+  bmBurgerBars: {
+    background: 'white'
+  },
+  bmBurgerBarsHover: {
+    background: '#a90000'
+  },
+  bmCrossButton: {
+    height: '24px',
+    width: '24px'
+  },
+  bmCross: {
+    background: 'white'
+  },
+  bmMenuWrap: {
+    position: 'fixed',
+    height: '100%'
+  },
+  bmMenu: {
+    background: '#C38F62',
+    padding: '2.5em 0.5em 0.5em',
+    fontSize: '2.15em',
+    lineHeight: '3.6em'
+  },
+  bmMorphShape: {
+    fill: '#C38F62'
+  },
+  bmItemList: {
+    color: '#b8b7ad',
+    padding: '0.8em'
+  },
+  bmItem: {
+    display: 'inline-block'
+  },
+  bmOverlay: {
+    background: 'rgba(0, 0, 0, 0.3)'
+  }
+}
+
+const Menu = ({pageWrapId, outerContainerId}
+) => {
     return (
-        <BurgerMenu>
+        <Reveal isOpen={ true } pageWrapId={pageWrapId} outerContainerId={outerContainerId} styles={ styles } >
         <div className="menuItem">
             <Link to='/'>
                 <span aria-hidden="true">💁🏻‍♂️</span>
@@ -21,7 +69,7 @@ const Menu = () => {
                 <u>Information</u>
                 </Link>
             </div>
-      </BurgerMenu>
+      </Reveal>
     )
 };
 
