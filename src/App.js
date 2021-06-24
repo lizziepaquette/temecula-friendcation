@@ -3,6 +3,7 @@ import Playlist from './components/Playlist'
 import MyCountdown from './components/MyCountdown'
 import AirbnbPreview from './components/AirbnbPreview'
 import GoogleMaps from './components/GoogleMaps'
+import GCalendar from './components/GCalendar'
 import Info from './components/Info'
 import { HashRouter, Route } from 'react-router-dom';
 
@@ -28,6 +29,11 @@ function App() {
         exact
         path='/google-maps'
         component={GoogleMaps}
+      />
+      <Route
+        exact
+        path='/calendar'
+        component={GCalendar}
       />
       <Route
         exact
