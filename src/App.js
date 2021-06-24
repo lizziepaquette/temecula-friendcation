@@ -1,15 +1,22 @@
 import './App.css';
-import { Router } from "@reach/router"
 import Playlist from './Playlist'
 import MyCountdown from './MyCountdown'
+import { HashRouter, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <Router>
-      <MyCountdown path="/" />
-      <Playlist  path={process.env.PUBLIC_URL + '/playlist'} />
-    </Router>
-
+    <HashRouter>
+      <Route
+        exact
+        path='/'
+        component={MyCountdown}
+      />
+      <Route
+        exact
+        path='/playlist'
+        component={Playlist}
+      />
+    </HashRouter>
   );
 }
 
