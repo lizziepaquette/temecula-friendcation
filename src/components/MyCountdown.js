@@ -5,12 +5,8 @@ import funnyBwBackground from '../photos/temecula-main-view-bw.svg';
 
 
 const CountdownHeader = styled.h1`
-  font-size: 12vw;
+  font-size: 18vmin;
   margin: 0px;
-
-  @media screen and (max-width: 768px) {
-    line-height: 200%
-  }
 `;
 
 
