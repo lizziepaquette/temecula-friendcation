@@ -1,21 +1,18 @@
 import './App.css';
-import React, { useState, useRef } from 'react';
 import Playlist from './components/Playlist'
 import MyCountdown from './components/MyCountdown'
 import AirbnbPreview from './components/AirbnbPreview'
 import GoogleMaps from './components/GoogleMaps'
 import GCalendar from './components/GCalendar'
 import Info from './components/Info'
-import { HashRouter, Route, Link, Switch } from 'react-router-dom';
-import { Burger, Menu } from './components';
-import FocusLock from 'react-focus-lock';
+import { HashRouter, Route, Switch } from 'react-router-dom';
+import Menu from './components/Menu'
 
 
 function App() {
   return (
-      <div>
-        Sup
    <HashRouter>
+     <Menu />
       <Switch>
         <Route
           exact
@@ -54,7 +51,6 @@ function App() {
         />
       </Switch>
     </HashRouter>
-    </div>
   );
 }
 
