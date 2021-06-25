@@ -11,7 +11,7 @@ const GoogleMaps = ({ google }) => {
   return <div className="container">
       <Map google={google}
           initialCenter={{lat: 33.5168599, lng: -117.0297209}}
-          style={{width: '50%', height: '50%', position: 'relative'}}
+          style={{width: '25%', height: '25%', position: 'relative'}}
           className={'map'}
           zoom={10}>
         <Marker

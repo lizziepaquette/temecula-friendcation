@@ -1,5 +1,7 @@
-import { reveal as Reveal } from 'react-burger-menu'
+import { slide as Reveal } from 'react-burger-menu'
 import { Link } from 'react-router-dom';
+import Sunset from '../photos/sunset.jpeg';
+import temeculaMainPhoto from '../photos/temecula-main-view.svg';
 
 
 var styles = {
@@ -28,10 +30,11 @@ var styles = {
     height: '100%'
   },
   bmMenu: {
-    background: '#C38F62',
+    backgroundImage: `url(${Sunset})`,
+    // background: '#C38F62',
     padding: '2.5em 0.5em 0.5em',
     fontSize: '2.15em',
-    lineHeight: '3.6em'
+    lineHeight: '3.6em',
   },
   bmMorphShape: {
     fill: '#C38F62'

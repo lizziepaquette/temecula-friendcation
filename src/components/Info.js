@@ -3,16 +3,17 @@ import AirbnbPreview from './AirbnbPreview'
 import GoogleMaps from './GoogleMaps'
 import { GCalendarStart, GCalendarEnd } from './GCalendar'
 import YoutubeVid from './YoutubeVid'
+import Sunset from '../photos/sunset.jpeg';
 
 const Info = () => (
-
     <div
         style={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          background: "blue"
-        }}>
+          color: "white",
+          backgroundImage: `url(${Sunset})`,
+         }}>
         <div>
         <table>
              <tr>
