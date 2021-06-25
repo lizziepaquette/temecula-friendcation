@@ -3,7 +3,7 @@ import Playlist from './components/Playlist'
 import MyCountdown from './components/MyCountdown'
 import AirbnbPreview from './components/AirbnbPreview'
 import GoogleMaps from './components/GoogleMaps'
-import GCalendar from './components/GCalendar'
+import YoutubeVid from './components/YoutubeVid'
 import Info from './components/Info'
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import Menu from './components/Menu'
@@ -38,18 +38,13 @@ function App() {
         />
         <Route
           exact
-          path='/calendar'
-          component={GCalendar}
-        />
-        <Route
-          exact
           path='/info'
           component={Info}
         />
         <Route
           exact
-          path='/menu'
-          component={Menu}
+          path='/youtube'
+          component={YoutubeVid}
         />
       </Switch>
         </main>

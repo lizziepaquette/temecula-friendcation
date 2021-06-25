@@ -51,7 +51,7 @@ var styles = {
 const Menu = ({pageWrapId, outerContainerId}
 ) => {
     return (
-        <Reveal isOpen={ true } pageWrapId={pageWrapId} outerContainerId={outerContainerId} styles={ styles } >
+        <Reveal pageWrapId={pageWrapId} outerContainerId={outerContainerId} styles={ styles } >
         <div className="menuItem">
             <Link to='/'>
                 <span aria-hidden="true">💁🏻‍♂️</span>
