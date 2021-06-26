@@ -74,14 +74,14 @@ const MenuLink = ({ linkTitle, linkDestination, onLinkClick }) => {
 
   return (
     <StyledLink to={ linkDestination } onClick={ onLinkClick } >
-      <span aria-hidden="true">💁🏻‍♂️</span>
+      <span aria-hidden="true">♂️</span>
       <LinkTitle hoverOnLink={ hoverOnLink } onMouseOver={ () => setHoverOnLink(true) } onMouseOut={ () => setHoverOnLink(false) }>
         { linkTitle }
       </LinkTitle>
     </StyledLink>
   );
 }
-  
+
 
 const Menu = ({pageWrapId, outerContainerId}
 ) => {
