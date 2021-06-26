@@ -2,6 +2,7 @@ import { slide as Reveal } from 'react-burger-menu'
 import { Link } from 'react-router-dom';
 import Sunset from '../photos/sunset.jpeg';
 import temeculaMainPhoto from '../photos/temecula-main-view.svg';
+import styled from 'styled-components';
 
 
 var styles = {
@@ -51,27 +52,39 @@ var styles = {
   }
 }
 
+const LinkTitle = styled.u`
+  text-decoration: none;
+`;
+
+const MenuLink = ({ linkTitle, linkDestination }) => (
+  <div className="menuItem">
+    <Link to={ linkDestination }>
+        <span aria-hidden="true">💁🏻‍♂️</span>
+        <LinkTitle>{ linkTitle }</LinkTitle>
+    </Link>
+  </div>
+)
+
 const Menu = ({pageWrapId, outerContainerId}
 ) => {
+    const menuItems = [
+      {
+        linkTitle: "Home",
+        linkDestination: '/'
+      },
+      {
+        linkTitle: "Collaborative Playlist",
+        linkDestination: '/playlist'
+      },
+      {
+        linkTitle: "Information",
+        linkDestination: '/info'
+      }
+    ];
+
     return (
-        <Reveal pageWrapId={pageWrapId} outerContainerId={outerContainerId} styles={ styles } >
-        <div className="menuItem">
-            <Link to='/'>
-                <span aria-hidden="true">💁🏻‍♂️</span>
-                <u>Home</u>
-            </Link></div>
-            <div className="menuItem">
-                <Link to='/playlist'>
-                <span aria-hidden="true">💁🏻‍♂️</span>
-                <u>Collaborative Playlist</u>
-                </Link>
-            </div>
-            <div className="menuItem">
-                <Link to='/info'>
-                <span aria-hidden="true">💁🏻‍♂️</span>
-                <u>Information</u>
-                </Link>
-            </div>
+      <Reveal pageWrapId={pageWrapId} outerContainerId={outerContainerId} styles={ styles } >
+        { menuItems.map(item => <MenuLink { ...item } /> ) }
       </Reveal>
     )
 };
