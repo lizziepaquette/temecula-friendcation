@@ -1,8 +1,7 @@
 import { slide as Reveal } from 'react-burger-menu'
 import { Link } from 'react-router-dom';
-import Sunset from '../photos/sunset.jpeg';
-import temeculaMainPhoto from '../photos/temecula-main-view.svg';
 import styled from 'styled-components';
+import { useState } from 'react';
 
 
 var styles = {
@@ -28,14 +27,16 @@ var styles = {
   },
   bmMenuWrap: {
     position: 'fixed',
-    height: '100%'
+    height: '100%',
+    width: '100%'
   },
   bmMenu: {
-    backgroundImage: `url(${Sunset})`,
-    // background: '#C38F62',
+    opacity: '0.7',
+    background: 'black',
     padding: '2.5em 0.5em 0.5em',
     fontSize: '2.15em',
     lineHeight: '3.6em',
+    overflow: 'none'
   },
   bmMorphShape: {
     fill: '#C38F62'
@@ -54,19 +55,38 @@ var styles = {
 
 const LinkTitle = styled.u`
   text-decoration: none;
+  color: ${ props => props.hoverOnLink ? 'grey' : 'white' };
+  line-height: 40px;
 `;
 
-const MenuLink = ({ linkTitle, linkDestination }) => (
-  <div className="menuItem">
-    <Link to={ linkDestination }>
-        <span aria-hidden="true">💁🏻‍♂️</span>
-        <LinkTitle>{ linkTitle }</LinkTitle>
-    </Link>
-  </div>
-)
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  ${LinkTitle} {
+    margin-left: 15px;
+  }
+`;
+
+const MenuLink = ({ linkTitle, linkDestination, onLinkClick }) => {
+  const [hoverOnLink, setHoverOnLink] = useState(false);
+
+  return (
+    <StyledLink to={ linkDestination } onClick={ onLinkClick } >
+      <span aria-hidden="true">💁🏻‍♂️</span>
+      <LinkTitle hoverOnLink={ hoverOnLink } onMouseOver={ () => setHoverOnLink(true) } onMouseOut={ () => setHoverOnLink(false) }>
+        { linkTitle }
+      </LinkTitle>
+    </StyledLink>
+  );
+}
+  
 
 const Menu = ({pageWrapId, outerContainerId}
 ) => {
+    const [isOpen, setIsOpen] = useState(false);
+    const closeMenu = () => setIsOpen(false);
     const menuItems = [
       {
         linkTitle: "Home",
@@ -83,8 +103,13 @@ const Menu = ({pageWrapId, outerContainerId}
     ];
 
     return (
-      <Reveal pageWrapId={pageWrapId} outerContainerId={outerContainerId} styles={ styles } >
-        { menuItems.map(item => <MenuLink { ...item } /> ) }
+      <Reveal
+          isOpen={isOpen}
+          pageWrapId={pageWrapId}
+          outerContainerId={outerContainerId}
+          styles={ styles }
+          onStateChange={ state => setIsOpen(state.isOpen) } >
+        { menuItems.map(item => <MenuLink key={item.linkTitle} onLinkClick={closeMenu} { ...item } /> ) }
       </Reveal>
     )
 };
