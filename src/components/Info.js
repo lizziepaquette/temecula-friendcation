@@ -1,16 +1,53 @@
 import React from "react"
+import AirbnbPreview from './AirbnbPreview'
+import GoogleMaps from './GoogleMaps'
+import { GCalendarStart, GCalendarEnd } from './GCalendar'
+import YoutubeVid from './YoutubeVid'
+import Sunset from '../photos/sunset.jpeg';
 
 const Info = () => (
-    <div>
-        <h1>
-            Welcome to the info page
-        </h1>
-
+    <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          color: "white",
+          backgroundImage: `url(${Sunset})`,
+         }}>
         <div>
-            Dates:
-            Friday ‌A‌u‌g‌u‌s‌t‌ ‌1‌3‌,‌ ‌2‌0‌2‌1‌ ‌C‌h‌e‌c‌k‌-‌i‌n‌ ‌i‌s‌ ‌4‌:‌0‌0‌ ‌P‌M‌ ‌-‌ ‌8‌:‌0‌0‌ ‌P‌M‌
-            Thursday ‌A‌u‌g‌u‌s‌t‌ ‌1‌9‌,‌ ‌2‌0‌2‌1‌ ‌Ch‌e‌c‌k‌o‌u‌t‌ ‌b‌y‌ ‌1‌1‌:‌0‌0‌ ‌A‌M‌
-        </div>
+        <table>
+             <tr>
+              <td>
+                <h1>When</h1>
+                </td>
+            </tr>
+            <tr><td> Friday ‌A‌u‌g‌u‌s‌t‌ ‌1‌3‌,‌ ‌2‌0‌2‌1‌ ‌C‌h‌e‌c‌k‌-‌i‌n‌ ‌i‌s‌ ‌4‌:‌0‌0‌ ‌P‌M‌ ‌-‌ ‌8‌:‌0‌0‌ ‌P‌M‌
+                <div> Click here to add the start to your calendar </div>
+            </td></tr>
+            <tr><td><GCalendarStart/></td></tr>
+
+            <tr><td>Thursday ‌A‌u‌g‌u‌s‌t‌ ‌1‌9‌,‌ ‌2‌0‌2‌1‌ ‌Ch‌e‌c‌k‌o‌u‌t‌ ‌b‌y‌ ‌1‌1‌:‌0‌0‌ ‌A‌M‌
+                <div> Click here to add the end to your calendar </div>
+            </td></tr>
+            <tr><td><GCalendarEnd/></td></tr>
+
+            <tr>
+                <h1>
+                    Where
+                </h1>
+                41480 Valencia Way, Temecula, CA 92592
+            </tr>
+            <tr>
+                <td><YoutubeVid /> </td>
+            </tr>
+            <tr>
+                <td><AirbnbPreview /> </td>
+            </tr>
+            <tr>
+                <td><GoogleMaps google = {"idk"} /> </td>
+            </tr>
+            </table>
+            </div>
     </div>
 )
 
