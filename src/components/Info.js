@@ -22,9 +22,12 @@ const Info = () => (
                 </td>
             </tr>
             <tr><td> Friday ‌A‌u‌g‌u‌s‌t‌ ‌1‌3‌,‌ ‌2‌0‌2‌1‌ ‌C‌h‌e‌c‌k‌-‌i‌n‌ ‌i‌s‌ ‌4‌:‌0‌0‌ ‌P‌M‌ ‌-‌ ‌8‌:‌0‌0‌ ‌P‌M‌
+                <div> Click here to add the start to your calendar </div>
             </td></tr>
             <tr><td><GCalendarStart/></td></tr>
+
             <tr><td>Thursday ‌A‌u‌g‌u‌s‌t‌ ‌1‌9‌,‌ ‌2‌0‌2‌1‌ ‌Ch‌e‌c‌k‌o‌u‌t‌ ‌b‌y‌ ‌1‌1‌:‌0‌0‌ ‌A‌M‌
+                <div> Click here to add the end to your calendar </div>
             </td></tr>
             <tr><td><GCalendarEnd/></td></tr>
 
