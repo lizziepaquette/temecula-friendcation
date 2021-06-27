@@ -1,6 +1,8 @@
 import React from "react"
 import styled from 'styled-components';
 import NightSky from '../photos/NightSky.mp4';
+import Clouds from '../photos/clouds.mp4';
+
 
 const PageWrapper = styled.div`
   @media screen and (max-width: 768px) {}
@@ -35,8 +37,26 @@ const MyVideo = styled.video`
   min-height: 100%;
 `;
 
+const CursiveTxt = styled.h1`
+    color: white;
+    font-family: "Snell Roundhand", cursive;
+    font-size: 250%;
+    letter-spacing: 3px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    margin-top: 0%;
+    margin-bottom: 12%;
+    margin-right: 5%;
+    margin-left: 15%;
+    position: fixed;
+    bottom: 5%;
+    width: 70%;
+    height 70%;
+`;
+
 const NightSkyBackground = () => (
-      <MyVideo className='videoTag' autoPlay loop muted>
+    <MyVideo className='videoTag' autoPlay loop muted>
       <source src={NightSky} type='video/mp4' />
   </MyVideo>
 );
@@ -44,11 +64,11 @@ const NightSkyBackground = () => (
 const Playlist = () => (
   // <PageWrapper className="App">
 <div>
-  // TODO: make this white and show up and script
-  <h1 style = {{color: 'white', position: 'fixed', right: '0', bottom: '0'}} >
-    Collaborative Playlist
-  </h1>
  <NightSkyBackground/>
+   <CursiveTxt>
+    Collaborative Playlist
+  </CursiveTxt>
+
   <SpotifyIframe
     title="Collaborative Playlist"
     src="https://open.spotify.com/embed/playlist/1mPkhlYZZEatTrN5t1AmPD"
