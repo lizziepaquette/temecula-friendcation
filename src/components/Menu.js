@@ -36,7 +36,11 @@ var styles = {
     padding: '2.5em 0.5em 0.5em',
     fontSize: '2.15em',
     lineHeight: '3.6em',
-    overflow: 'none'
+    overflow: 'none',
+    fontWeight: '500',
+    textTransform: 'uppercase',
+  // letter-spacing: 3px;
+  fontFamily: 'Montserrat, sans-serif'
   },
   bmMorphShape: {
     fill: '#C38F62'
@@ -74,7 +78,7 @@ const MenuLink = ({ linkTitle, linkDestination, onLinkClick }) => {
 
   return (
     <StyledLink to={ linkDestination } onClick={ onLinkClick } >
-      <span aria-hidden="true">♂️</span>
+      <span aria-hidden="true">&nbsp;</span>
       <LinkTitle hoverOnLink={ hoverOnLink } onMouseOver={ () => setHoverOnLink(true) } onMouseOut={ () => setHoverOnLink(false) }>
         { linkTitle }
       </LinkTitle>

@@ -39,15 +39,17 @@ const MyVideo = styled.video`
 
 const CursiveTxt = styled.h1`
     color: white;
-    font-family: "Snell Roundhand", cursive;
+    // font-family: "Snell Roundhand", cursive;
+    font-family: 'League Script', cursive;
     font-size: 250%;
-    letter-spacing: 3px;
-    font-weight: 600;
+    letter-spacing: 5px;
+    font-weight: 700;
     display: flex;
     justify-content: center;
+    text-align: center;
     margin-top: 0%;
-    margin-bottom: 12%;
-    margin-right: 5%;
+    margin-bottom: 150px;
+    margin-right: 10%;
     margin-left: 15%;
     position: fixed;
     bottom: 5%;
