@@ -47,7 +47,7 @@ const CursiveTxt = styled.h1`
     display: flex;
     justify-content: center;
     margin-top: 0%;
-    margin-bottom: 11%;
+    margin-bottom: 12%;
     margin-right: 5%;
     margin-left: 15%;
     position: fixed;
