@@ -22,7 +22,7 @@ const AirbnbPreview = ({ isScriptLoaded, isScriptLoadSucceed }) => {
       class="airbnb-embed-frame"
       data-id="40889879"
       data-view="home"
-      style={{ width: 450, height: 300, margin: "auto" }}
+      style={{ width: '100%', height: 300 }}
     >
       <a href="https://www.airbnb.com/rooms/40889879?check_in=2021-08-13&amp;check_out=2021-08-19&amp;guests=1&amp;adults=1&amp;s=66&amp;unique_share_id=245a1952-1116-4ed8-8348-6aecb8892ab3&amp;source=embed_widget">View On Airbnb</a>
       <a href="https://www.airbnb.com/rooms/40889879?check_in=2021-08-13&amp;check_out=2021-08-19&amp;guests=1&amp;adults=1&amp;s=66&amp;unique_share_id=245a1952-1116-4ed8-8348-6aecb8892ab3&amp;source=embed_widget" rel="nofollow">Stunning Wine Country estate- New Pool/Spa</a>
