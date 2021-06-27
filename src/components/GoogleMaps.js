@@ -7,29 +7,34 @@ const GoogleMaps = ({ google }) => {
   //   console.log("onMouseOver(): ", props);
   //   alert("hello luna: ");
   // };
+  const containerStyle = {
+    width: '100%',
+    height: '400px',
+    position: 'relative'
+  };
 
-  return <div className="container">
-      <Map google={google}
-          initialCenter={{lat: 33.5168599, lng: -117.0297209}}
-          style={{width: '25%', height: '25%', position: 'relative'}}
-          className={'map'}
-          zoom={10}>
-        <Marker
-          title={'The marker`s title will appear as a tooltip.'}
-          name={'The House'}
-          position={{lat: 33.5168599, lng: -117.0297209}}>
-          {/* // onMouseover={onMouseoverMarker}> */}
-            <InfoWindow
-              visible={true}
-              // style={styles.infoWindow}
-              >
-                <div className="info-window">
-                  <p>Click on the map or drag the marker to select location where the incident occurred</p>
-                </div>
-            </InfoWindow>
-        </Marker>
-      </Map>
-    </div>
+  return (
+    <Map google={google}
+        initialCenter={{lat: 33.5168599, lng: -117.0297209}}
+        containerStyle={containerStyle}
+        className={'map'}
+        zoom={10}>
+      <Marker
+        title={'Home!'}
+        name={'The House'}
+        position={{lat: 33.5168599, lng: -117.0297209}}>
+        {/* // onMouseover={onMouseoverMarker}> */}
+          <InfoWindow
+            visible={true}
+            // style={styles.infoWindow}
+            >
+              <div className="info-window">
+                <p>Click on the map or drag the marker to select location where the incident occurred</p>
+              </div>
+          </InfoWindow>
+      </Marker>
+    </Map>
+  );
 }
 
 

@@ -2,7 +2,7 @@ import React from "react"
 
 const YoutubeVid = () => (
     <div>
-    <iframe width="560"
+    <iframe width="100%"
         height="315"
         src="https://www.youtube.com/embed/Kktx2ph4UYc"
         title="YouTube video player"
