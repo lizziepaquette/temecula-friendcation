@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 const SMonth = styled.div`
   padding: 70px 25px;
-  width: 91%;
   background-color: rgba(98, 129, 141, 0.2);
   text-align: center;
 `;
@@ -26,17 +25,19 @@ const SMonthLi = styled.li`
 const EventLi = styled.li`
   list-style-type: none;
   color: white;
-  font-size: 20px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 3px;
+  text-align: left;
 `;
 
 const CalLi = styled.li`
   list-style-type: none;
   color: white;
-  font-size: 20px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 3px;
+  text-align: right;
 `;
 
 const SWeekday = styled.ul`
