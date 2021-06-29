@@ -106,12 +106,21 @@ const Menu = ({pageWrapId, outerContainerId}
       }
     ];
 
+    const mql = window.matchMedia('(max-width: 375px)');
+    const updatedStyles = {
+      ...styles,
+      bmMenu: {
+        ...styles.bmMenu,
+        fontSize: mql.matches ? '1.25em' : styles.bmMenu.fontSize
+      }
+    };
+
     return (
       <Reveal
           isOpen={isOpen}
           pageWrapId={pageWrapId}
           outerContainerId={outerContainerId}
-          styles={ styles }
+          styles={ updatedStyles }
           onStateChange={ state => setIsOpen(state.isOpen) } >
         { menuItems.map(item => <MenuLink key={item.linkTitle} onLinkClick={closeMenu} { ...item } /> ) }
       </Reveal>
