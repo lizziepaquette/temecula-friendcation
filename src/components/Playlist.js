@@ -13,7 +13,7 @@ const SpotifyIframe = styled.iframe`
     position: fixed;
     top: 200px;
     width: 70%;
-    height 70%;
+    height 55%;
 `;
 
 
@@ -27,7 +27,6 @@ const MyVideo = styled.video`
 
 const CursiveTxt = styled.h1`
     color: white;
-    // font-family: "Snell Roundhand", cursive;
     font-family: 'League Script', cursive;
     font-size: 250%;
     letter-spacing: 5px;
