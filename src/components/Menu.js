@@ -116,7 +116,7 @@ const Menu = ({pageWrapId, outerContainerId}
       },
       bmMenu: {
         ...styles.bmMenu,
-        fontSize: smallScreenObj.matches ? '1.25em' : styles.bmMenu.fontSize
+        fontSize: smallScreenObj.matches ? '1.5em' : styles.bmMenu.fontSize
       }
     };
 
