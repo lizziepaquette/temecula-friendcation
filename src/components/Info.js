@@ -23,12 +23,18 @@ const CloudsBackground = () => (
   </MyVideo>
 );
 
+const WhereSectionWrapper = styled.div`
+    > div {
+        margin-bottom: 10px
+    }
+`;
+
 const WhereSection = () => {
     return (
-        <>
-            <div>41480 Valencia Way, Temecula, CA 92592</div>
+        <WhereSectionWrapper>
+            <div><strong>41480 Valencia Way, Temecula, CA 92592</strong></div>
             <GoogleMaps google = {"google"} />
-        </>
+        </WhereSectionWrapper>
     );
 }
 
@@ -41,20 +47,26 @@ const InfoSection = ({ title, content }) => {
     );
 }
 
+const WhenSectionWrapper = styled.div`
+    > div {
+        margin-bottom: 10px;
+    }
+`;
+
 const WhenSection = () => {
     return (
-        <>
-            <div>Friday ‌A‌u‌g‌u‌s‌t‌ ‌1‌3‌,‌ ‌2‌0‌2‌1‌ ‌C‌h‌e‌c‌k‌-‌i‌n‌ ‌i‌s‌ ‌4‌:‌0‌0‌ ‌P‌M‌ ‌-‌ ‌8‌:‌0‌0‌ ‌P‌M‌ </div>
-            <div style={{ display: 'flex', alignItems: 'center' }}> Click on this button to add the event to your calendar: <GCalendar /> </div>
+        <WhenSectionWrapper>
+            <div><strong>C‌h‌e‌c‌k‌-‌i‌n‌: </strong>‌Friday ‌A‌u‌g‌u‌s‌t‌ ‌1‌3‌,‌ ‌2‌0‌2‌1‌ from ‌4‌:‌0‌0‌ ‌P‌M‌ ‌-‌ ‌8‌:‌0‌0‌ ‌P‌M‌ </div>
+            <div><strong>Ch‌e‌c‌k‌-o‌u‌t‌: </strong>Thursday ‌A‌u‌g‌u‌s‌t‌ ‌1‌9‌,‌ ‌2‌0‌2‌1‌ ‌b‌y‌ ‌1‌1‌:‌0‌0‌ ‌A‌M‌</div>
+            <div style={{ display: 'flex', alignItems: 'center', marginTop: '10px' }}> Click on this button to add the event to your calendar: <GCalendar /> </div>
             <RawCalendar/>
-            <div>Thursday ‌A‌u‌g‌u‌s‌t‌ ‌1‌9‌,‌ ‌2‌0‌2‌1‌ ‌Ch‌e‌c‌k‌o‌u‌t‌ ‌b‌y‌ ‌1‌1‌:‌0‌0‌ ‌A‌M‌</div>
-        </>
+        </WhenSectionWrapper>
     );
 }
 
 const InfoWrapper = styled.div`
     color: white;
-    padding: 1% 100px;
+    padding: 100px 5% 5% 35px;
     background-image: url(${Sunset});
     box-sizing: border-box;
     background-size: cover;
@@ -64,9 +76,9 @@ const InfoWrapper = styled.div`
     // letter-spacing: 3px;
     font-family: 'Montserrat', sans-serif;
 
-    @media only screen and (max-width: 600px) {
-        padding: 1% 25px 1% 100px;
-    }
+    // @media only screen and (max-width: 600px) {
+    //     padding: 1% 25px 1% 100px;
+    // }
 `;
 
 const Info = () => {
