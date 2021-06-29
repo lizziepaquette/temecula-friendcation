@@ -16,6 +16,9 @@ const SpotifyIframe = styled.iframe`
 `
 
 const MyVideo = styled.video`
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   right: 0;
   bottom: 0;
