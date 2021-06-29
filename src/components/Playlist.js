@@ -3,27 +3,15 @@ import styled from 'styled-components';
 import NightSky from '../photos/NightSky.mp4';
 import Clouds from '../photos/clouds.mp4';
 
-
-const PageWrapper = styled.div`
-  @media screen and (max-width: 768px) {}
-    display: flex;
-    justify-content: center;
-    // background: #386085;
-
-`;
-
 const SpotifyIframe = styled.iframe`
     align-items: center;
     display: flex;
     justify-content: center;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    margin-right: 5%;
     margin-left: 15%;
     // height:100vh;
     // width: 100vh;
     position: fixed;
-    bottom: 5%;
+    top: 200px;
     width: 70%;
     height 70%;
 `;
@@ -52,7 +40,7 @@ const CursiveTxt = styled.h1`
     margin-right: 10%;
     margin-left: 15%;
     position: fixed;
-    bottom: 5%;
+    top: 100px;
     width: 70%;
     height 70%;
 `;
@@ -63,23 +51,23 @@ const NightSkyBackground = () => (
   </MyVideo>
 );
 
-const Playlist = () => (
-  // <PageWrapper className="App">
-<div>
- <NightSkyBackground/>
-   <CursiveTxt>
-    Collaborative Playlist
-  </CursiveTxt>
+const PageWrapper = styled.div``;
 
-  <SpotifyIframe
-    title="Collaborative Playlist"
-    src="https://open.spotify.com/embed/playlist/1mPkhlYZZEatTrN5t1AmPD"
-    frameborder="0"
-    allowtransparency="true"
-    allow="encrypted-media">
-  </SpotifyIframe>
-</div>
-  // </PageWrapper>
+const Playlist = () => (
+  <PageWrapper>
+    <NightSkyBackground/>
+    <CursiveTxt>
+      Collaborative Playlist
+    </CursiveTxt>
+
+    <SpotifyIframe
+      title="Collaborative Playlist"
+      src="https://open.spotify.com/embed/playlist/1mPkhlYZZEatTrN5t1AmPD"
+      frameborder="0"
+      allowtransparency="true"
+      allow="encrypted-media">
+    </SpotifyIframe>
+  </PageWrapper>
 )
 
 export default Playlist;
