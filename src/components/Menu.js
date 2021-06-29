@@ -106,12 +106,26 @@ const Menu = ({pageWrapId, outerContainerId}
       }
     ];
 
+    const smallScreenObj = window.matchMedia('(max-width: 375px)');
+    const largeScreenObj = window.matchMedia('(min-width: 975px)');
+    const updatedStyles = {
+      ...styles,
+      bmMenuWrap: {
+        ...styles.bmMenuWrap,
+        width: largeScreenObj.matches ? '425px' : styles.bmMenuWrap.width
+      },
+      bmMenu: {
+        ...styles.bmMenu,
+        fontSize: smallScreenObj.matches ? '1.25em' : styles.bmMenu.fontSize
+      }
+    };
+
     return (
       <Reveal
           isOpen={isOpen}
           pageWrapId={pageWrapId}
           outerContainerId={outerContainerId}
-          styles={ styles }
+          styles={ updatedStyles }
           onStateChange={ state => setIsOpen(state.isOpen) } >
         { menuItems.map(item => <MenuLink key={item.linkTitle} onLinkClick={closeMenu} { ...item } /> ) }
       </Reveal>
