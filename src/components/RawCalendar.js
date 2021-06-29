@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 const SMonth = styled.div`
   padding: 70px 25px;
-  width: 91%;
   background-color: rgba(98, 129, 141, 0.2);
   text-align: center;
 `;
@@ -16,11 +15,29 @@ const SMonthUl = styled.ul`
 
 const SMonthLi = styled.li`
   list-style-type: none;
-
   color: white;
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 3px;
+`;
+
+
+const EventLi = styled.li`
+  list-style-type: none;
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: left;
+`;
+
+const CalLi = styled.li`
+  list-style-type: none;
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: right;
 `;
 
 const SWeekday = styled.ul`
@@ -73,10 +90,26 @@ const SDayActive = styled.span`
 //   .weekdays li, .days li {width: 12.2%;}
 // }
 
+// Google Calendar link
+// https://calendar.google.com/calendar/u/0?cid=ZjYzNjhlMmtjZnFpYnY0dWRoam4wOGNrNGtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ
+
+// Add to your calendar
+// https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=MGQ1NzhoMWJ0cGswN2I2OTk1Nm83dmQyZ28gZjYzNjhlMmtjZnFpYnY0dWRoam4wOGNrNGtAZw&amp;tmsrc=f6368e2kcfqibv4udhjn08ck4k%40group.calendar.google.com
+
 const RawCalendar = () => (
     <div>
 <SMonth class="month">
   <SMonthUl>
+    <EventLi class="Event">
+      <a href= "https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=MGQ1NzhoMWJ0cGswN2I2OTk1Nm83dmQyZ28gZjYzNjhlMmtjZnFpYnY0dWRoam4wOGNrNGtAZw&amp;tmsrc=f6368e2kcfqibv4udhjn08ck4k%40group.calendar.google.com">
+        Add to your calendar
+      </a>
+    </EventLi>
+    <CalLi class="Cal">
+      <a href= "https://calendar.google.com/calendar/u/0?cid=ZjYzNjhlMmtjZnFpYnY0dWRoam4wOGNrNGtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">
+      See event calendar
+      </a>
+    </CalLi>
     <SMonthLi>
       August
       <span style= {{ fontSize: '18px' }} >2021</span>

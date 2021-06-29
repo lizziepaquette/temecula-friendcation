@@ -1,13 +1,11 @@
 import React from "react"
 import AirbnbPreview from './AirbnbPreview'
-import GoogleMaps from './GoogleMaps'
 import RawCalendar from './RawCalendar'
 import YoutubeVid from './YoutubeVid'
 import Sunset from '../photos/sunset.jpeg';
 import Clouds from '../photos/clouds.mp4';
 import styled from 'styled-components';
-import GCalendar from './GCalendar';
-
+import RawMaps from './RawMaps';
 
 const MyVideo = styled.video`
   position: fixed;
@@ -32,8 +30,7 @@ const WhereSectionWrapper = styled.div`
 const WhereSection = () => {
     return (
         <WhereSectionWrapper>
-            <div><strong>41480 Valencia Way, Temecula, CA 92592</strong></div>
-            <GoogleMaps google = {"google"} />
+            <RawMaps/>
         </WhereSectionWrapper>
     );
 }
@@ -58,7 +55,6 @@ const WhenSection = () => {
         <WhenSectionWrapper>
             <div><strong>C‌h‌e‌c‌k‌-‌i‌n‌: </strong>‌Friday ‌A‌u‌g‌u‌s‌t‌ ‌1‌3‌,‌ ‌2‌0‌2‌1‌ from ‌4‌:‌0‌0‌ ‌P‌M‌ ‌-‌ ‌8‌:‌0‌0‌ ‌P‌M‌ </div>
             <div><strong>Ch‌e‌c‌k‌-o‌u‌t‌: </strong>Thursday ‌A‌u‌g‌u‌s‌t‌ ‌1‌9‌,‌ ‌2‌0‌2‌1‌ ‌b‌y‌ ‌1‌1‌:‌0‌0‌ ‌A‌M‌</div>
-            <div style={{ display: 'flex', alignItems: 'center', marginTop: '10px' }}> Click on this button to add the event to your calendar: <GCalendar /> </div>
             <RawCalendar/>
         </WhenSectionWrapper>
     );
