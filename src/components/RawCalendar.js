@@ -124,54 +124,24 @@ const SDayActive = styled.span`
 // https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=MGQ1NzhoMWJ0cGswN2I2OTk1Nm83dmQyZ28gZjYzNjhlMmtjZnFpYnY0dWRoam4wOGNrNGtAZw&amp;tmsrc=f6368e2kcfqibv4udhjn08ck4k%40group.calendar.google.com
 
 const RawCalendar = () => {
-  const smallScreenObj = window.matchMedia(`(max-width: ${SMALL_SCREEN_BREAKPOINT}px)`);
-
-  let headerJsx;
-  if (smallScreenObj.matches) {
-    headerJsx = (
-      <>
-        <SMonthLi>
-          August
-          <span style= {{ fontSize: '18px' }} >&nbsp;2021</span>
-        </SMonthLi>
-        <EventLi class="Event">
-          <a href= "https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=MGQ1NzhoMWJ0cGswN2I2OTk1Nm83dmQyZ28gZjYzNjhlMmtjZnFpYnY0dWRoam4wOGNrNGtAZw&amp;tmsrc=f6368e2kcfqibv4udhjn08ck4k%40group.calendar.google.com">
-            Add to your calendar
-          </a>
-        </EventLi>
-        <CalLi class="Cal">
-          <a href= "https://calendar.google.com/calendar/u/0?cid=ZjYzNjhlMmtjZnFpYnY0dWRoam4wOGNrNGtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">
-          See event calendar
-          </a>
-        </CalLi>
-      </>
-    );
-  } else {
-    headerJsx = (
-      <>
-        <EventLi class="Event">
-          <a href= "https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=MGQ1NzhoMWJ0cGswN2I2OTk1Nm83dmQyZ28gZjYzNjhlMmtjZnFpYnY0dWRoam4wOGNrNGtAZw&amp;tmsrc=f6368e2kcfqibv4udhjn08ck4k%40group.calendar.google.com">
-            Add to your calendar
-          </a>
-        </EventLi>
-        <SMonthLi>
-          August
-          <span style= {{ fontSize: '18px' }} >&nbsp;2021</span>
-        </SMonthLi>
-        <CalLi class="Cal">
-          <a href= "https://calendar.google.com/calendar/u/0?cid=ZjYzNjhlMmtjZnFpYnY0dWRoam4wOGNrNGtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">
-          See event calendar
-          </a>
-        </CalLi>
-      </>
-    );
-  }
-
   return (
     <div>
       <SMonth class="month">
         <SMonthUl>
-          { headerJsx }
+          <EventLi class="Event">
+            <a href= "https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=MGQ1NzhoMWJ0cGswN2I2OTk1Nm83dmQyZ28gZjYzNjhlMmtjZnFpYnY0dWRoam4wOGNrNGtAZw&amp;tmsrc=f6368e2kcfqibv4udhjn08ck4k%40group.calendar.google.com">
+              Add to your calendar
+            </a>
+          </EventLi>
+          <SMonthLi>
+            August
+            <span style= {{ fontSize: '18px' }} >&nbsp;2021</span>
+          </SMonthLi>
+          <CalLi class="Cal">
+            <a href= "https://calendar.google.com/calendar/u/0?cid=ZjYzNjhlMmtjZnFpYnY0dWRoam4wOGNrNGtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">
+            See event calendar
+            </a>
+          </CalLi>
         </SMonthUl>
       </SMonth>
 
