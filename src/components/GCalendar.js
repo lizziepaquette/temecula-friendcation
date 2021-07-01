@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 
 const GCalendar = () => (
     <div style={{ display: 'inline-block', marginLeft: '15px' }}>
@@ -8,11 +8,11 @@ const GCalendar = () => (
             style= {{ border: 0 }}
             width="800"
             height="600"
-            frameborder="0"
+            frameBorder="0"
             scrolling="no">
         </iframe>
 
-        <a target="_blank" href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=MGQ1NzhoMWJ0cGswN2I2OTk1Nm83dmQyZ28gZjYzNjhlMmtjZnFpYnY0dWRoam4wOGNrNGtAZw&amp;tmsrc=f6368e2kcfqibv4udhjn08ck4k%40group.calendar.google.com">
+        <a target="_blank" href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=MGQ1NzhoMWJ0cGswN2I2OTk1Nm83dmQyZ28gZjYzNjhlMmtjZnFpYnY0dWRoam4wOGNrNGtAZw&amp;tmsrc=f6368e2kcfqibv4udhjn08ck4k%40group.calendar.google.com" rel="noreferrer">
             <img
                 width="100%"
                 height="100%"
@@ -22,6 +22,6 @@ const GCalendar = () => (
             </img>
         </a>
     </div>
-);
+)
 
-export default GCalendar;
+export default GCalendar

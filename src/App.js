@@ -1,19 +1,19 @@
-import './App.css';
+import './App.css'
+import React from 'react'
 import Playlist from './components/Playlist'
 import MyCountdown from './components/MyCountdown'
 import AirbnbPreview from './components/AirbnbPreview'
 import GoogleMaps from './components/GoogleMaps'
 import YoutubeVid from './components/YoutubeVid'
 import Info from './components/Info'
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom'
 import Menu from './components/Menu'
 
-
-function App() {
+function App () {
   return (
     <div id="outer-container">
       <HashRouter>
-        <Menu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } />
+        <Menu pageWrapId={ 'page-wrap' } outerContainerId={ 'outer-container' } />
         <main id="page-wrap">
           <Switch>
             <Route
@@ -50,7 +50,7 @@ function App() {
         </main>
       </HashRouter>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

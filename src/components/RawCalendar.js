@@ -1,13 +1,13 @@
-import React from "react";
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 
-const SMALL_SCREEN_BREAKPOINT = 550;
+const SMALL_SCREEN_BREAKPOINT = 550
 
 const SMonth = styled.div`
   padding: 70px 25px;
   background-color: rgba(98, 129, 141, 0.2);
   text-align: center;
-`;
+`
 
 const SMonthUl = styled.ul`
   margin: 0;
@@ -23,7 +23,7 @@ const SMonthUl = styled.ul`
       margin-bottom: 15px;
     }
   }
-`;
+`
 
 const SMonthLi = styled.li`
   list-style-type: none;
@@ -32,8 +32,7 @@ const SMonthLi = styled.li`
   text-transform: uppercase;
   letter-spacing: 3px;
   padding: 0 15px;
-`;
-
+`
 
 const EventLi = styled.li`
   list-style-type: none;
@@ -49,7 +48,7 @@ const EventLi = styled.li`
       text-decoration: underline;
     }
   }
-`;
+`
 
 const CalLi = styled.li`
   list-style-type: none;
@@ -65,26 +64,26 @@ const CalLi = styled.li`
       text-decoration: underline;
     }
   }
-`;
+`
 
 const SWeekday = styled.ul`
   margin: 0;
   padding: 10px 0;
   background-color: rgba(221, 221, 221, 0.2);
-`;
+`
 
 const SWeekdays = styled.li`
   display: inline-block;
   width: 13.6%;
   color: white;
   text-align: center;
-`;
+`
 
 const SDay = styled.ul`
   padding: 10px 0;
   background-color: rgba(238, 238, 238, 0.2);
   margin: 0;
-`;
+`
 
 const SDays = styled.li`
   list-style-type: none;
@@ -95,13 +94,13 @@ const SDays = styled.li`
   margin-bottom: 5px;
   color: white;
   font-size:12px;
-`;
+`
 
 const SDayActive = styled.span`
   padding: 8px;
   background: rgba(220, 134, 110, 1);
   color: white !important
-`;
+`
 
 // /* Add media queries for smaller screens */
 // @media screen and (max-width:720px) {
@@ -189,7 +188,7 @@ const RawCalendar = () => {
         <SDays>31</SDays>
       </SDay>
       </div>
-      );
-};
+  )
+}
 
-export default RawCalendar;
+export default RawCalendar

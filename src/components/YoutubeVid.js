@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 
 const YoutubeVid = () => (
     <div>
@@ -6,11 +6,11 @@ const YoutubeVid = () => (
         height="315"
         src="https://www.youtube.com/embed/Kktx2ph4UYc"
         title="YouTube video player"
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen="true">
+        allowFullScreen="true">
     </iframe>
     </div>
-);
+)
 
-export default YoutubeVid;
+export default YoutubeVid
