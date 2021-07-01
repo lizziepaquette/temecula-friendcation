@@ -1,6 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Map, Marker, GoogleApiWrapper, InfoWindow } from 'google-maps-react';
+import React from 'react'
+import { Map, Marker, GoogleApiWrapper, InfoWindow } from 'google-maps-react'
 
 const GoogleMaps = ({ google }) => {
   // const onMouseoverMarker = (props, marker, e) => {
@@ -11,18 +10,18 @@ const GoogleMaps = ({ google }) => {
     width: '100%',
     height: '400px',
     position: 'relative'
-  };
+  }
 
   return (
     <Map google={google}
-        initialCenter={{lat: 33.5168599, lng: -117.0297209}}
+        initialCenter={{ lat: 33.5168599, lng: -117.0297209 }}
         containerStyle={containerStyle}
         className={'map'}
         zoom={10}>
       <Marker
         title={'Home!'}
         name={'The House'}
-        position={{lat: 33.5168599, lng: -117.0297209}}>
+        position={{ lat: 33.5168599, lng: -117.0297209 }}>
         {/* // onMouseover={onMouseoverMarker}> */}
           <InfoWindow
             visible={true}
@@ -34,10 +33,9 @@ const GoogleMaps = ({ google }) => {
           </InfoWindow>
       </Marker>
     </Map>
-  );
+  )
 }
 
-
 export default GoogleApiWrapper({
- apiKey: ('AIzaSyDQlPtxzFon2R_q3h5VMpKazXRaX1CkysI')
-})(GoogleMaps);
+  apiKey: ('AIzaSyDQlPtxzFon2R_q3h5VMpKazXRaX1CkysI')
+})(GoogleMaps)

@@ -1,10 +1,9 @@
 import { slide as Reveal } from 'react-burger-menu'
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import { useState } from 'react';
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+import React, { useState } from 'react'
 
-
-var styles = {
+const styles = {
   bmBurgerButton: {
     position: 'fixed',
     width: '36px',
@@ -39,8 +38,8 @@ var styles = {
     overflow: 'none',
     fontWeight: '500',
     textTransform: 'uppercase',
-  // letter-spacing: 3px;
-  fontFamily: 'Montserrat, sans-serif'
+    // letter-spacing: 3px;
+    fontFamily: 'Montserrat, sans-serif'
   },
   bmMorphShape: {
     fill: '#C38F62'
@@ -59,9 +58,9 @@ var styles = {
 
 const LinkTitle = styled.u`
   text-decoration: none;
-  color: ${ props => props.hoverOnLink ? 'grey' : 'white' };
+  color: ${props => props.hoverOnLink ? 'grey' : 'white'};
   line-height: 40px;
-`;
+`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
@@ -71,10 +70,10 @@ const StyledLink = styled(Link)`
   ${LinkTitle} {
     margin-left: 15px;
   }
-`;
+`
 
 const MenuLink = ({ linkTitle, linkDestination, onLinkClick }) => {
-  const [hoverOnLink, setHoverOnLink] = useState(false);
+  const [hoverOnLink, setHoverOnLink] = useState(false)
 
   return (
     <StyledLink to={ linkDestination } onClick={ onLinkClick } >
@@ -83,53 +82,52 @@ const MenuLink = ({ linkTitle, linkDestination, onLinkClick }) => {
         { linkTitle }
       </LinkTitle>
     </StyledLink>
-  );
+  )
 }
 
-
-const Menu = ({pageWrapId, outerContainerId}
+const Menu = ({ pageWrapId, outerContainerId }
 ) => {
-    const [isOpen, setIsOpen] = useState(false);
-    const closeMenu = () => setIsOpen(false);
-    const menuItems = [
-      {
-        linkTitle: "Home",
-        linkDestination: '/'
-      },
-      {
-        linkTitle: "Collaborative Playlist",
-        linkDestination: '/playlist'
-      },
-      {
-        linkTitle: "Information",
-        linkDestination: '/info'
-      }
-    ];
+  const [isOpen, setIsOpen] = useState(false)
+  const closeMenu = () => setIsOpen(false)
+  const menuItems = [
+    {
+      linkTitle: 'Home',
+      linkDestination: '/'
+    },
+    {
+      linkTitle: 'Collaborative Playlist',
+      linkDestination: '/playlist'
+    },
+    {
+      linkTitle: 'Information',
+      linkDestination: '/info'
+    }
+  ]
 
-    const smallScreenObj = window.matchMedia('(max-width: 375px)');
-    const largeScreenObj = window.matchMedia('(min-width: 975px)');
-    const updatedStyles = {
-      ...styles,
-      bmMenuWrap: {
-        ...styles.bmMenuWrap,
-        width: largeScreenObj.matches ? '425px' : styles.bmMenuWrap.width
-      },
-      bmMenu: {
-        ...styles.bmMenu,
-        fontSize: smallScreenObj.matches ? '1.75em' : styles.bmMenu.fontSize
-      }
-    };
+  const smallScreenObj = window.matchMedia('(max-width: 375px)')
+  const largeScreenObj = window.matchMedia('(min-width: 975px)')
+  const updatedStyles = {
+    ...styles,
+    bmMenuWrap: {
+      ...styles.bmMenuWrap,
+      width: largeScreenObj.matches ? '425px' : styles.bmMenuWrap.width
+    },
+    bmMenu: {
+      ...styles.bmMenu,
+      fontSize: smallScreenObj.matches ? '1.75em' : styles.bmMenu.fontSize
+    }
+  }
 
-    return (
+  return (
       <Reveal
           isOpen={isOpen}
           pageWrapId={pageWrapId}
           outerContainerId={outerContainerId}
           styles={ updatedStyles }
           onStateChange={ state => setIsOpen(state.isOpen) } >
-        { menuItems.map(item => <MenuLink key={item.linkTitle} onLinkClick={closeMenu} { ...item } /> ) }
+        { menuItems.map(item => <MenuLink key={item.linkTitle} onLinkClick={closeMenu} { ...item } />) }
       </Reveal>
-    )
-};
+  )
+}
 
-export default Menu;
+export default Menu

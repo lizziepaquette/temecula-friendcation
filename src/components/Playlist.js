@@ -1,7 +1,6 @@
-import React from "react"
-import styled from 'styled-components';
-import NightSky from '../photos/NightSky.mp4';
-import Clouds from '../photos/clouds.mp4';
+import React from 'react'
+import styled from 'styled-components'
+import NightSky from '../photos/NightSky.mp4'
 
 const SpotifyIframe = styled.iframe`
     align-items: center;
@@ -14,8 +13,7 @@ const SpotifyIframe = styled.iframe`
     top: 200px;
     width: 70%;
     height 55%;
-`;
-
+`
 
 const MyVideo = styled.video`
   position: fixed;
@@ -23,7 +21,7 @@ const MyVideo = styled.video`
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-`;
+`
 
 const CursiveTxt = styled.h1`
     color: white;
@@ -42,15 +40,15 @@ const CursiveTxt = styled.h1`
     top: 100px;
     width: 70%;
     height 70%;
-`;
+`
 
 const NightSkyBackground = () => (
     <MyVideo className='videoTag' autoPlay loop muted>
       <source src={NightSky} type='video/mp4' />
   </MyVideo>
-);
+)
 
-const PageWrapper = styled.div``;
+const PageWrapper = styled.div``
 
 const Playlist = () => (
   <PageWrapper>
@@ -69,4 +67,4 @@ const Playlist = () => (
   </PageWrapper>
 )
 
-export default Playlist;
+export default Playlist
