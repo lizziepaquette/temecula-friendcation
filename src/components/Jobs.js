@@ -1,6 +1,6 @@
 import React from "react"
 import scriptLoader from "react-async-script-loader";
-import RepoCard from "react-repo-card";
+// import RepoCard from "react-repo-card";
 import Clouds from '../photos/clouds.mp4';
 import styled from 'styled-components';
 
@@ -70,7 +70,11 @@ const InfoWrapper = styled.div`
 `;
 
 //https://github.com/lepture/github-cards
-const Jobs = () => {
+const Jobs = ({ isScriptLoaded, isScriptLoadSucceed }) => {
+  if (isScriptLoaded && isScriptLoadSucceed) {
+    window.AirbnbAPI.bootstrap();
+  }
+
     const infoSectionProps = [
             {
                 title: "Title",
@@ -88,10 +92,10 @@ const Jobs = () => {
                 title: "Jennifer Cummings",
                 content: <CardDiv className="github-card" data-github="jenncummings" data-width="400" data-height="" data-theme="medium"></CardDiv>
             },
-            {
-                title: "Repo",
-                content: <CardDiv style={{ width: "405px" }}><RepoCard username="lizziepaquette" repository="temecula-friendcation" /></CardDiv>
-            }
+            // {
+            //     title: "Repo",
+            //     content: <CardDiv style={{ width: "405px" }}><RepoCard username="lizziepaquette" repository="temecula-friendcation" /></CardDiv>
+            // }
         ];
         return (
             <div>
