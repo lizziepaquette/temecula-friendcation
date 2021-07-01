@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Countdown from 'react-countdown'
+import { Link } from 'react-router-dom'
 import temeculaMainPhoto from '../photos/temecula-main-view.svg'
 import funnyBwBackground from '../photos/temecula-main-view-bw.svg'
 
@@ -28,6 +29,20 @@ const CountdownClockWrapper = styled.div`
   line-height: 20vh;
 `
 
+const Styleda = styled.a`
+  text-decoration: none;
+  font-size: 1vmin;
+  font-weight: 550;
+  text-transform: uppercase;
+  // letter-spacing: 3px;
+  font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+`
+
 const CountdownClock = ({ days, hours, minutes, seconds, completed }) => {
   if (completed) {
     return (
@@ -38,14 +53,27 @@ const CountdownClock = ({ days, hours, minutes, seconds, completed }) => {
   }
 
   return (
+    <div>
     <CountdownClockWrapper bgImg={ temeculaMainPhoto } >
+      <div>
       <CountdownHeader>
         {days} Days <br/>
         {hours} Hours <br/>
         {minutes} Minutes <br />
         {seconds} Seconds
+        <Styleda href= "#/jobs">
+        <br />
+          Careers
+        </Styleda>
+
       </CountdownHeader>
+      </div>
+      <div>
+        {/* TODO: use Link rather than href */}
+
+      </div>
     </CountdownClockWrapper>
+    </div>
   )
 }
 

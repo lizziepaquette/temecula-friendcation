@@ -1,6 +1,6 @@
 import React from "react"
 import scriptLoader from "react-async-script-loader";
-// import RepoCard from "react-repo-card";
+import RepoCard from "react-repo-card";
 import Clouds from '../photos/clouds.mp4';
 import styled from 'styled-components';
 
@@ -21,10 +21,13 @@ const CloudsBackground = () => (
 );
 
 const CardDiv = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    // display: flex;
-    // justify-content: center;
-    // text-align: center;
+    color: white;
+    -webkit-text-stroke: 1px gray;
+    margin: 0px;
     // margin-top: 0%;
     // margin-bottom: 150px;
     // margin-right: 10%;
@@ -36,77 +39,96 @@ const CardDiv = styled.div`
 `;
 
 const Title = styled.div`
-    color: blue;
-    position: fixed;
-    top: 100px;
-    text-align: center;
+    font-size: 5vmin;
+    margin: 0px;
+    font-weight: 600;
+    text-transform: uppercase;
+    // letter-spacing: 3px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    position: relative;
+    -webkit-text-stroke: 1px gray;
 `;
 
 const InfoSection = ({ title, content }) => {
     return (
-        <div>
+        <CardDiv>
             <h1>{ title }</h1>
             { content }
-        </div>
+        </CardDiv>
     );
 }
 
-const InfoWrapper = styled.div`
-    color: white;
-    padding: 100px 5% 5% 35px;
-    // background-image: url(${CloudsBackground});
-    box-sizing: border-box;
-    background-size: cover;
-    background-repeat: no-repeat;
-    font-weight: 500;
-    text-transform: uppercase;
-    // letter-spacing: 3px;
-    font-family: 'Montserrat', sans-serif;
+// const InfoWrapper = styled.div`
+//     color: white;
+//     padding: 100px 5% 5% 35px;
+//     // background-image: url(${CloudsBackground});
+//     box-sizing: border-box;
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     font-weight: 500;
+//     text-transform: uppercase;
+//     // letter-spacing: 3px;
+//     font-family: 'Montserrat', sans-serif;
 
-    // @media only screen and (max-width: 600px) {
-    //     padding: 1% 25px 1% 100px;
-    // }
-`;
+//     // @media only screen and (max-width: 600px) {
+//     //     padding: 1% 25px 1% 100px;
+//     // }
+// `;
 
 //https://github.com/lepture/github-cards
 const Jobs = ({ isScriptLoaded, isScriptLoadSucceed }) => {
   if (isScriptLoaded && isScriptLoadSucceed) {
-    window.AirbnbAPI.bootstrap();
+    // window.AirbnbAPI.bootstrap();
+  } else {
+      console.log("whyyyyy not")
   }
 
     const infoSectionProps = [
             {
-                title: "Title",
-                content: <Title> Meet the team</Title>
-            },
-            {
                 title: "Lizzie Paquette",
-                content: <CardDiv className="github-card" data-github="lizziepaquette" data-width="400" data-height="200" data-theme="medium"></CardDiv>
+                content: <div className="github-card" data-github="lizziepaquette" data-width="400" data-height="200" data-theme="medium"></div>
             },
             {
                 title: "Jack Ricci",
-                content:  <CardDiv className="github-card" data-github="justjack555" data-width="400" data-height="" data-theme="medium"></CardDiv>
+                content:  <div className="github-card" data-github="justjack555" data-width="400" data-height="" data-theme="medium"></div>
             },
             {
                 title: "Jennifer Cummings",
-                content: <CardDiv className="github-card" data-github="jenncummings" data-width="400" data-height="" data-theme="medium"></CardDiv>
+                content: <div className="github-card" data-github="jenncummings" data-width="400" data-height="" data-theme="medium"></div>
             },
-            // {
-            //     title: "Repo",
-            //     content: <CardDiv style={{ width: "405px" }}><RepoCard username="lizziepaquette" repository="temecula-friendcation" /></CardDiv>
-            // }
+            {
+                title: "Repo",
+                content: <div className="github-card" data-github="lizziepaquette/temecula-friendcation" data-width="400" data-height="" data-theme="medium"></div>
+
+            },
+            {
+                title: "Repo",
+                content: <RepoCard username="lizziepaquette" repository="temecula-friendcation" />
+            }
         ];
         return (
             <div>
             <CloudsBackground/>
-            <InfoWrapper>
+            <Title> Meet the Team </Title>
+            {/* <InfoWrapper> */}
                 { infoSectionProps.map(sec => <InfoSection { ...sec } /> ) }
-            </InfoWrapper>
+            {/* </InfoWrapper> */}
             </div>
         );
 }
 
+{/* <div class="content">
+   <h1>Jack Ricci</h1>
+   <ul class="status">
+      <li><a href="https://github.com/justjack555?tab=repositories" target="_top"><strong>13</strong>Repos</a></li>
+      <li><a href="https://gist.github.com/justjack555" target="_top"><strong>0</strong>Gists</a></li>
+      <li><a href="https://github.com/justjack555/followers" target="_top"><strong>2</strong>Followers</a></li>
+   </ul>
+</div> */}
 
     // <div>
     //     <CloudsBackground/>
