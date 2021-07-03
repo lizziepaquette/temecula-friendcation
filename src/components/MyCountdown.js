@@ -31,10 +31,9 @@ const CountdownClockWrapper = styled.div`
 
 const Styleda = styled.a`
   text-decoration: none;
-  font-size: 1vmin;
+  font-size: 10px;
   font-weight: 550;
   text-transform: uppercase;
-  // letter-spacing: 3px;
   font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     color: white;
@@ -61,16 +60,12 @@ const CountdownClock = ({ days, hours, minutes, seconds, completed }) => {
         {hours} Hours <br/>
         {minutes} Minutes <br />
         {seconds} Seconds
-        <Styleda href= "#/jobs">
-        <br />
-          Careers
-        </Styleda>
-
       </CountdownHeader>
+      <div style={{ lineHeight: '5vh'}}>
+        <Styleda href= "#/jobs">
+         <br/> <br/> Careers
+        </Styleda>
       </div>
-      <div>
-        {/* TODO: use Link rather than href */}
-
       </div>
     </CountdownClockWrapper>
     </div>
