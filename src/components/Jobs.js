@@ -22,7 +22,6 @@ const CloudsBackground = () => (
 
 const CardDiv = styled.div`
     float: left;
-    // display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -30,15 +29,10 @@ const CardDiv = styled.div`
     color: white;
     -webkit-text-stroke: 1px gray;
     margin: 5%;
-    // position: fixed;
-    // top: 200px;
-    // width: 70%;
-    // height 70%;
 `;
 
 const Title = styled.div`
     font-size: 5vmin;
-    margin: 10%;
     font-weight: 600;
     text-transform: uppercase;
     // letter-spacing: 3px;
@@ -61,13 +55,14 @@ const InfoSection = ({ title, content }) => {
     );
 }
 
-// const InfoWrapper = styled.div`
-//     color: white;
-//     padding: 100px 5% 5% 35px;
-//     // background-image: url(${CloudsBackground});
-//     box-sizing: border-box;
-//     background-size: cover;
-//     background-repeat: no-repeat;
+// https://stackoverflow.com/questions/2603700/how-to-align-3-divs-left-center-right-inside-another-div
+const InfoWrapper = styled.div`
+  display: flex;                  /* establish flex container */
+  flex-direction: row;            /* default value; can be omitted */
+  flex-wrap: nowrap;              /* default value; can be omitted */
+  justify-content: space-between; /* switched from default (flex-start, see below) */
+  background-color: lightyellow;
+  mergin-left: 5px;
 //     font-weight: 500;
 //     text-transform: uppercase;
 //     // letter-spacing: 3px;
@@ -76,7 +71,7 @@ const InfoSection = ({ title, content }) => {
 //     // @media only screen and (max-width: 600px) {
 //     //     padding: 1% 25px 1% 100px;
 //     // }
-// `;
+`;
 
 //https://github.com/lepture/github-cards
 const Jobs = ({ isScriptLoaded, isScriptLoadSucceed }) => {
@@ -89,15 +84,15 @@ const Jobs = ({ isScriptLoaded, isScriptLoadSucceed }) => {
     const infoSectionProps = [
             {
                 title: "Lizzie Paquette",
-                content: "hi" // <div className="github-card" data-github="lizziepaquette" data-width="400" data-height="200" data-theme="medium"></div>
+                content: <div className="github-card" data-github="lizziepaquette" data-width="400" data-height="" data-theme="default"></div>
             },
             {
                 title: "Jack Ricci",
-                content:  "hi" // <div className="github-card" data-github="justjack555" data-width="400" data-height="" data-theme="medium"></div>
+                content:  <div className="github-card" data-github="justjack555" data-width="400" data-height="" data-theme="default"></div>
             },
             {
                 title: "Jennifer Cummings",
-                content: "hi" // <div className="github-card" data-github="jenncummings" data-width="400" data-height="" data-theme="medium"></div>
+                content:  <div className="github-card" data-github="jenncummings" data-width="400" data-height="" data-theme="medium"></div>
             },
             // {
             //     title: "Repo",
@@ -110,13 +105,13 @@ const Jobs = ({ isScriptLoaded, isScriptLoadSucceed }) => {
             // }
         ];
         return (
-            <div style={{justifyContent: 'center', alignItems: 'center'}}>
-            {/* <CloudsBackground/> */}
-            <Title> Meet the Team </Title>
-            {/* <InfoWrapper> */}
+            <div>
+            <CloudsBackground/>
+            <Title> <br/> Meet the Team </Title>
+            <InfoWrapper>
                 { infoSectionProps.map(sec => <InfoSection { ...sec } /> ) }
             {/* <Title> RepoReal </Title> */}
-            {/* </InfoWrapper> */}
+            </InfoWrapper>
             </div>
         );
 }
