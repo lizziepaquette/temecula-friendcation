@@ -61,11 +61,11 @@ const CountdownClock = ({ days, hours, minutes, seconds, completed }) => {
         {minutes} Minutes <br />
         {seconds} Seconds
       </CountdownHeader>
-      <div style={{ lineHeight: '5vh'}}>
+      {/* <div style={{ lineHeight: '5vh'}}>
         <Styleda href= "#/jobs">
          <br/> <br/> Careers
         </Styleda>
-      </div>
+      </div> */}
       </div>
     </CountdownClockWrapper>
     </div>
