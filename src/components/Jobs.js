@@ -59,10 +59,11 @@ const InfoSection = ({ title, content }) => {
 const InfoWrapper = styled.div`
   display: flex;                  /* establish flex container */
   flex-direction: row;            /* default value; can be omitted */
-  flex-wrap: nowrap;              /* default value; can be omitted */
-  justify-content: space-between; /* switched from default (flex-start, see below) */
+  flex-wrap: wrap;
+  justify-content: flex-start
   background-color: lightyellow;
   mergin-left: 5px;
+  width: 100%;
 //     font-weight: 500;
 //     text-transform: uppercase;
 //     // letter-spacing: 3px;
@@ -96,13 +97,13 @@ const Jobs = ({ isScriptLoaded, isScriptLoadSucceed }) => {
             },
             // {
             //     title: "Repo",
-            //     content: "hi" // <div className="github-card" data-github="lizziepaquette/temecula-friendcation" data-width="400" data-height="" data-theme="medium"></div>
+            //     content: <div className="github-card" data-github="lizziepaquette/temecula-friendcation" data-width="400" data-height="" data-theme="medium"></div>
 
             // },
-            // {
-            //     title: "Repo",
-            //     content: "hi" // <RepoCard username="lizziepaquette" repository="temecula-friendcation" />
-            // }
+            {
+                title: "Repo",
+                content:  <RepoCard username="lizziepaquette" repository="temecula-friendcation" />
+            }
         ];
         return (
             <div>
