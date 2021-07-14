@@ -61,7 +61,7 @@ const StyledGHIcon = styled.div`
   z-index: 1000;
   position: fixed;
   left: 50vw;
-  bottom: 7px;
+  bottom: 3px;
   -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
   filter: invert(100%);
   > a {

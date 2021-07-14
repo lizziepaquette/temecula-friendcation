@@ -32,7 +32,7 @@ const CardDiv = styled.div`
 `;
 
 const Title = styled.div`
-    font-size: 7vmin;
+    font-size: 2.5em;
     font-weight: 600;
     text-transform: uppercase;
     // letter-spacing: 3px;
@@ -41,6 +41,7 @@ const Title = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    top: 12px;
     position: relative;
     -webkit-text-stroke: 1px gray;
     text-align: center;
