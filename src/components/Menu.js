@@ -101,7 +101,11 @@ const Menu = ({ pageWrapId, outerContainerId }
     {
       linkTitle: 'Information',
       linkDestination: '/info'
-    }
+    },
+    {
+      linkTitle: 'Travel Logistics',
+      linkDestination: '/logistics'
+    },
   ]
 
   const smallScreenObj = window.matchMedia('(max-width: 375px)')

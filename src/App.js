@@ -4,10 +4,10 @@ import Playlist from './components/Playlist'
 import MyCountdown from './components/MyCountdown'
 import AirbnbPreview from './components/AirbnbPreview'
 import Jobs from './components/Jobs'
-import YoutubeVid from './components/YoutubeVid'
 import Info from './components/Info'
 import { HashRouter, Route, Switch } from 'react-router-dom'
 import Menu from './components/Menu'
+import Logistics from './components/Logistics';
 
 function App () {
   return (
@@ -43,8 +43,8 @@ function App () {
             />
             <Route
               exact
-              path='/youtube'
-              component={YoutubeVid}
+              path='/logistics'
+              component={Logistics}
             />
           </Switch>
         </main>
