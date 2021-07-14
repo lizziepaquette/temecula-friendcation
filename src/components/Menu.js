@@ -58,16 +58,20 @@ const styles = {
 }
 
 const StyledGHIcon = styled.div`
+  z-index: 1000;
   position: fixed;
   left: 50vw;
-  top: 97vh;
+  bottom: 7px;
   -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
   filter: invert(100%);
-  opacity: 50%;
   > a {
+    opacity: 50%;
     cursor: pointer;
     &:hover {
-      opacity: 50%;
+      opacity: 150%;
+      > img {
+         width: 120%;
+      }
     }
   }
 `
