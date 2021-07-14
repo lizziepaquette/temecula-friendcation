@@ -28,7 +28,7 @@ const CardDiv = styled.div`
     text-align: center;
     color: white;
     -webkit-text-stroke: 1px gray;
-    margin: 5%;
+    margin: 2%;
 `;
 
 const Title = styled.div`
@@ -60,7 +60,8 @@ const InfoWrapper = styled.div`
   display: flex;                  /* establish flex container */
   flex-direction: row;            /* default value; can be omitted */
   flex-wrap: wrap;
-  justify-content: flex-start
+//   justify-content: flex-start
+  justify-content: center;
   background-color: lightyellow;
   mergin-left: 5px;
   width: 100%;
