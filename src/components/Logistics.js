@@ -7,7 +7,7 @@ const LogisticsIframe = styled.iframe`
     display: flex;
     justify-content: center;
     height: 85%;
-    margin: 20px;
+    margin: 5%;
     margin-bottom: 20px;
     margin-top: 70px;
     width: 100%;
@@ -29,10 +29,11 @@ const PageStyle = styled.div`
   line-height: 20vh;
 `;
 
+// https://www.localwebstrategies.com/post/how-to-embed-editable-google-sheets-in-website
 const Logistics = () => (
     <PageStyle>
     <LogisticsIframe
-        src="https://docs.google.com/spreadsheets/d/1RRy8h4gIc215vqbMBt7nklGBLXJjXdjvYYRvJvioQmw/edit?usp=sharing">
+        src="https://docs.google.com/spreadsheets/d/1RRy8h4gIc215vqbMBt7nklGBLXJjXdjvYYRvJvioQmw/edit?usp=sharing?&amp;widget=true&amp;headers=false&amp;rm=minimal&amp;single=true&amp;">
     </LogisticsIframe>
     </PageStyle>
 )
