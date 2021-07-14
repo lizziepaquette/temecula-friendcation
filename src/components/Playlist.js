@@ -30,7 +30,7 @@ const CursiveTxt = styled.h1`
     color: white;
     font-family: 'League Script', cursive;
     font-size: 250%;
-    letter-spacing: 5px;
+    // letter-spacing: 2px;
     font-weight: 700;
     display: flex;
     justify-content: center;

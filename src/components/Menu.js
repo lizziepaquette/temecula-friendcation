@@ -2,6 +2,7 @@ import { slide as Reveal } from 'react-burger-menu'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import React, { useState } from 'react'
+import GithubIcon from '../photos/mark-github.svg'
 
 const styles = {
   bmBurgerButton: {
@@ -56,6 +57,25 @@ const styles = {
   }
 }
 
+const StyledGHIcon = styled.div`
+  z-index: 1000;
+  position: fixed;
+  left: 50vw;
+  bottom: 7px;
+  -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+  filter: invert(100%);
+  > a {
+    opacity: 50%;
+    cursor: pointer;
+    &:hover {
+      opacity: 150%;
+      > img {
+         width: 120%;
+      }
+    }
+  }
+`
+
 const LinkTitle = styled.u`
   text-decoration: none;
   color: ${props => props.hoverOnLink ? 'grey' : 'white'};
@@ -66,7 +86,6 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   display: flex;
   align-items: center;
-
   ${LinkTitle} {
     margin-left: 15px;
   }
@@ -123,6 +142,7 @@ const Menu = ({ pageWrapId, outerContainerId }
   }
 
   return (
+    <div>
       <Reveal
           isOpen={isOpen}
           pageWrapId={pageWrapId}
@@ -131,6 +151,12 @@ const Menu = ({ pageWrapId, outerContainerId }
           onStateChange={ state => setIsOpen(state.isOpen) } >
         { menuItems.map(item => <MenuLink key={item.linkTitle} onLinkClick={closeMenu} { ...item } />) }
       </Reveal>
+      <StyledGHIcon>
+        <a href="#/jobs">
+          <img src={GithubIcon} alt="Github Icon" />
+        </a>
+      </StyledGHIcon>
+    </div>
   )
 }
 
