@@ -33,7 +33,7 @@ const PageStyle = styled.div`
 const Logistics = () => (
     <PageStyle>
     <LogisticsIframe
-        src="https://docs.google.com/spreadsheets/d/1RRy8h4gIc215vqbMBt7nklGBLXJjXdjvYYRvJvioQmw/edit?usp=sharing?&amp;widget=true&amp;headers=false&amp;rm=minimal&amp;single=true&amp;">
+        src="https://docs.google.com/spreadsheets/d/1RRy8h4gIc215vqbMBt7nklGBLXJjXdjvYYRvJvioQmw/edit?usp=sharing?&amp;rm=minimal&amp;single=true&amp;headers=false&amp;widget=true&amp;">
     </LogisticsIframe>
     </PageStyle>
 )
