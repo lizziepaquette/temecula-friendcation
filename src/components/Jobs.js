@@ -28,11 +28,11 @@ const CardDiv = styled.div`
     text-align: center;
     color: white;
     -webkit-text-stroke: 1px gray;
-    margin: 2%;
+    margin: 5%;
 `;
 
 const Title = styled.div`
-    font-size: 5vmin;
+    font-size: 7vmin;
     font-weight: 600;
     text-transform: uppercase;
     // letter-spacing: 3px;
@@ -86,24 +86,20 @@ const Jobs = ({ isScriptLoaded, isScriptLoadSucceed }) => {
     const infoSectionProps = [
             {
                 title: "Lizzie Paquette",
-                content: <div className="github-card" data-github="lizziepaquette" data-width="400" data-height="" data-theme="default"></div>
+                content: <div className="github-card" data-github="lizziepaquette" data-width="300" data-height="" data-theme="default"></div>
             },
             {
                 title: "Jack Ricci",
-                content:  <div className="github-card" data-github="justjack555" data-width="400" data-height="" data-theme="default"></div>
+                content:  <div className="github-card" data-github="justjack555" data-width="300" data-height="" data-theme="default"></div>
             },
             {
                 title: "Jennifer Cummings",
-                content:  <div className="github-card" data-github="jenncummings" data-width="400" data-height="" data-theme="medium"></div>
+                content:  <div className="github-card" data-github="jenncummings" data-width="300" data-height="" data-theme="default"></div>
             },
-            // {
-            //     title: "Repo",
-            //     content: <div className="github-card" data-github="lizziepaquette/temecula-friendcation" data-width="400" data-height="" data-theme="medium"></div>
-
-            // },
             {
-                title: "Repo",
-                content:  <RepoCard username="lizziepaquette" repository="temecula-friendcation" />
+                title: "Github Repository",
+                content: <div className="github-card" data-github="lizziepaquette/temecula-friendcation" data-width="300" data-height="" data-theme="default"></div>
+
             }
         ];
         return (
@@ -112,31 +108,9 @@ const Jobs = ({ isScriptLoaded, isScriptLoadSucceed }) => {
             <Title> <br/> Meet the Team </Title>
             <InfoWrapper>
                 { infoSectionProps.map(sec => <InfoSection { ...sec } /> ) }
-            {/* <Title> RepoReal </Title> */}
             </InfoWrapper>
             </div>
         );
 }
-
-{/* <div class="content">
-   <h1>Jack Ricci</h1>
-   <ul class="status">
-      <li><a href="https://github.com/justjack555?tab=repositories" target="_top"><strong>13</strong>Repos</a></li>
-      <li><a href="https://gist.github.com/justjack555" target="_top"><strong>0</strong>Gists</a></li>
-      <li><a href="https://github.com/justjack555/followers" target="_top"><strong>2</strong>Followers</a></li>
-   </ul>
-</div> */}
-
-    // <div>
-    //     <CloudsBackground/>
-    //     <Title> Meet the team</Title>
-    //     <CardDiv className="github-card" data-github="justjack555" data-width="400" data-height="" data-theme="default"></CardDiv>
-    //     <CardDiv className="github-card" data-github="jenncummings" data-width="400" data-height="" data-theme="default"></CardDiv>
-    //     <CardDiv className="github-card" data-github="lizziepaquette/temecula-friendcation" data-width="400" data-height="" data-theme="default"></CardDiv>
-    // <CardDiv style={{ width: "405px" }}>
-    //   <RepoCard username="lizziepaquette" repository="homeRepo" />
-    // </CardDiv>
-
-    // </div>
 
 export default scriptLoader(["//cdn.jsdelivr.net/github-cards/latest/widget.js"]) (Jobs);
