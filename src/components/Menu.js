@@ -118,13 +118,17 @@ const Menu = ({ pageWrapId, outerContainerId }
       linkDestination: '/playlist'
     },
     {
-      linkTitle: 'Information',
+      linkTitle: 'Date and Location',
       linkDestination: '/info'
     },
     {
-      linkTitle: 'Travel Logistics',
+      linkTitle: 'Logistics Spreadsheet',
       linkDestination: '/logistics'
     },
+    {
+      linkTitle: 'Schedule',
+      linkDestination: '/schedule'
+    }
   ]
 
   const smallScreenObj = window.matchMedia('(max-width: 375px)')

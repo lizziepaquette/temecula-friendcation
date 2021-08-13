@@ -8,6 +8,8 @@ import Info from './components/Info'
 import { HashRouter, Route, Switch } from 'react-router-dom'
 import Menu from './components/Menu'
 import Logistics from './components/Logistics';
+import Schedule from './components/Schedule';
+
 
 function App () {
   return (
@@ -45,6 +47,11 @@ function App () {
               exact
               path='/logistics'
               component={Logistics}
+            />
+            <Route
+              exact
+              path='/schedule'
+              component={Schedule}
             />
           </Switch>
         </main>
