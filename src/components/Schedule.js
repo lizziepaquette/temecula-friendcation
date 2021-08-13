@@ -1,5 +1,5 @@
 import React from 'react'
-import Sunset from '../photos/retro.jpeg'
+import Sunset from '../photos/retro.jpg'
 import styled from 'styled-components'
 
 
