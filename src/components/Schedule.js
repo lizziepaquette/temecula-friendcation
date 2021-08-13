@@ -14,11 +14,14 @@ const InfoSection = ({ title, content }) => {
 
 const InfoWrapper = styled.div`
     color: white;
+    height: 100vh;
+    width: 100vw;
     padding: 100px 5% 5% 35px;
     background-image: url(${Sunset});
     box-sizing: border-box;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     font-weight: 500;
     text-transform: uppercase;
     text-align: center;
@@ -61,7 +64,7 @@ const Schedule = () => {
         {
       title: 'Thursday',
       content: <div>Ch‌e‌c‌k‌ o‌u‌t‌ by 1‌1‌:‌0‌0‌ ‌A‌M‌</div>
-    },
+    }
   ]
   return (
         <InfoWrapper>
