@@ -9,7 +9,7 @@ import { HashRouter, Route, Switch } from 'react-router-dom'
 import Menu from './components/Menu'
 import Logistics from './components/Logistics';
 import ReactGA from 'react-ga';
-
+import Schedule from './components/Schedule';
 
 function App () {
   ReactGA.initialize("UA-202521087-1");
@@ -51,6 +51,11 @@ function App () {
               exact
               path='/logistics'
               component={Logistics}
+            />
+            <Route
+              exact
+              path='/schedule'
+              component={Schedule}
             />
           </Switch>
         </main>
