@@ -16,7 +16,7 @@ const InfoWrapper = styled.div`
     color: white;
     height: 100vh;
     width: 100vw;
-    padding: 100px 5% 5% 35px;
+    padding: 70px 5% 5% 35px;
     background-image: url(${Sunset});
     box-sizing: border-box;
     background-size: cover;
@@ -28,9 +28,10 @@ const InfoWrapper = styled.div`
     letter-spacing: 2px;
     font-family: 'Montserrat', sans-serif;
 
-    // @media only screen and (max-width: 600px) {
-    //     padding: 1% 25px 1% 100px;
-    // }
+    @media only screen and (max-width: 600px) {
+        height: auto;
+        width: auto;
+    }
 `
 
 const Schedule = () => {
@@ -41,7 +42,10 @@ const Schedule = () => {
     },
     {
       title: 'Saturday',
-      content: <div> Rage all day </div>
+      content: <div>
+        <div> Costco Run 9am </div>
+        <div> Rage all day </div>
+        </div>
     },
     {
       title: 'Sunday',

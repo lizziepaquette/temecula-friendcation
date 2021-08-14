@@ -34,7 +34,7 @@ const styles = {
     opacity: '0.7',
     background: 'black',
     padding: '2.5em 0.5em 0.5em',
-    fontSize: '2.15em',
+    fontSize: '2.0em',
     lineHeight: '3.6em',
     overflow: 'none',
     fontWeight: '500',
