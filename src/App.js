@@ -8,10 +8,14 @@ import Info from './components/Info'
 import { HashRouter, Route, Switch } from 'react-router-dom'
 import Menu from './components/Menu'
 import Logistics from './components/Logistics';
+import ReactGA from 'react-ga';
 import Schedule from './components/Schedule';
 
-
 function App () {
+  ReactGA.initialize("UA-202521087-1");
+
+  ReactGA.pageview(window.location.pathname + window.location.search);
+
   return (
     <div id="outer-container">
       <HashRouter>
