@@ -14,8 +14,6 @@ const InfoSection = ({ title, content }) => {
 
 const InfoWrapper = styled.div`
     color: white;
-    height: 100vh;
-    width: 100vw;
     padding: 70px 5% 5% 35px;
     background-image: url(${Sunset});
     box-sizing: border-box;
@@ -27,11 +25,6 @@ const InfoWrapper = styled.div`
     text-align: center;
     letter-spacing: 2px;
     font-family: 'Montserrat', sans-serif;
-
-    @media only screen and (max-width: 600px) {
-        height: auto;
-        width: auto;
-    }
 `
 
 const Schedule = () => {
