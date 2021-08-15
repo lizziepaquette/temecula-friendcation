@@ -49,20 +49,35 @@ const Schedule = () => {
     },
     {
       title: 'Sunday',
-      content: <div> <div> Recover </div> Horse winery tour at 6pm </div>
+      content: <div>
+        <div> Choose your adventure 12-5pm</div>
+        <div> Horse winery tour at 6pm </div>
+        <div> Wine + fire + maybe old town (Blackbird, Coin Op, Stampede, 1909) </div>
+    </div>
     },
     {
       title: 'Monday',
-      content: <div> Winery Crawl starting at 10am</div>
+      content: <div>
+            <div> Nature Hike leaving 7am - 2pm </div>
+            <div> Games too </div>
+            <div> Take a mental trip after 4pm </div>
+        </div>
     },
         {
       title: 'Tuesday',
-      content: <div> Pachanga Casino </div>
+      content: <div>
+            <div> Choose your own adventure 10-5pm </div>
+            <div> Pachanga Casino Open 24 hours (Optional)</div>
+            <div> Disco Rave (at home) 6pm </div>
+            <div> Jenn Berkeley Public Library Talk: Popping the science bubble 5:15pm - 7:30pm </div>
+          </div>
     },
         {
       title: 'Wednesday',
       content: <div>
-            <div> Rage again </div> Jenn Berkeley Public Library Talk: Popping the science bubble at 5:15pm
+          <div> Alejandro and Angie hot air balloon 5am </div>
+          <div> Games + Wineries w/ reservations (Bottaia +  Fazeli + others) </div>
+          <div> Rage again </div>
         </div>
     },
         {
