@@ -27,6 +27,10 @@ const InfoWrapper = styled.div`
     font-family: 'Montserrat', sans-serif;
 `
 
+const Bdiv = styled.div`
+
+`
+
 const Schedule = () => {
   const infoSectionProps = [
     {
@@ -36,41 +40,46 @@ const Schedule = () => {
     {
       title: 'Saturday',
       content: <div>
-        <div> Costco Run 9am </div>
-        <div> Rage all day </div>
+            <div> Costco Run 9am </div>
+            <div> Rage all day </div>
+            <div> Rotisserie chicken by Costco 6pm </div>
         </div>
     },
     {
       title: 'Sunday',
       content: <div>
-        <div> Choose your adventure 12-5pm</div>
-        <div> Horse winery tour at 6pm </div>
-        <div> Wine + fire + maybe old town (Blackbird, Coin Op, Stampede, 1909) </div>
-    </div>
+            <div> Choose your adventure 12pm - 4:30pm</div>
+            <div> Fazeli&apos;s Winery 4:30pm - 5:45pm </div>
+            <div> Horse winery tour at 6pm </div>
+            <div> Steaktips, corn, and salad by Chef Kate 8pm </div>
+        </div>
     },
     {
       title: 'Monday',
       content: <div>
-            <div> Nature Hike leaving 7am - 2pm </div>
-            <div> Games too </div>
-            <div> Take a mental trip after 4pm </div>
+            <div> Nature Hike leaving 8am - 2pm </div>
+            <div> Tiki Happy Hour 4pm - 6pm </div>
+            <div> Chilequiles by Chef Alejandro and Chef Angie 8pm </div>
+            <div> Bon fire 9pm - 11pm </div>
         </div>
     },
         {
       title: 'Tuesday',
       content: <div>
-            <div> Choose your own adventure 10-5pm </div>
-            <div> Pachanga Casino Open 24 hours (Optional)</div>
-            <div> Disco Rave (at home) 6pm </div>
-            <div> Jenn Berkeley Public Library Talk: Popping the science bubble 5:15pm - 7:30pm </div>
+            <Bdiv> Pechanga Casino 11am - 1pm (Optional) </Bdiv>
+            <Bdiv> Pool it dude 1pm - 4:30pm </Bdiv>
+            <Bdiv> Dunch Kofta and Pasta Bolognese by Chef Ayah and Chef Auguste 3:30pm </Bdiv>
+            <Bdiv> Jenn&apos;s &quot;Berkeley Public Library Talk: Popping the Science Bubble&quot; viewing party + rave outfit and face styling 5pm - 6pm</Bdiv>
+            <Bdiv> Disco Rave (at home) 6:30pm - 1am </Bdiv>
           </div>
     },
         {
       title: 'Wednesday',
       content: <div>
-          <div> Alejandro and Angie hot air balloon 5am </div>
-          <div> Games + Wineries w/ reservations (Bottaia +  Fazeli + others) </div>
-          <div> Rage again </div>
+          <div > Alejandro and Angie hot air balloon 5am </div>
+          <div> Temeculympics 11am - 4pm </div>
+          <div> All day grill buffet by Chef &apos;Grill Daddy&apos; Bernard </div>
+          <div> Karaoke Celebration 7pm </div>
         </div>
     },
         {
