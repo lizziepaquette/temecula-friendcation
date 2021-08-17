@@ -122,8 +122,8 @@ const Menu = ({ pageWrapId, outerContainerId }
       linkDestination: '/info'
     },
     {
-      linkTitle: 'Logistics Spreadsheet',
-      linkDestination: '/logistics'
+      linkTitle: 'Temeculympics',
+      linkDestination: '/temeculympics'
     },
     {
       linkTitle: 'Schedule',

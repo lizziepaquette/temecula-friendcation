@@ -49,7 +49,7 @@ function App () {
             />
             <Route
               exact
-              path='/logistics'
+              path='/temeculympics'
               component={Logistics}
             />
             <Route
